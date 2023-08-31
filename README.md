@@ -40,7 +40,7 @@ upscaler.start(); // start upscale
 ```
 
 ## Examples
-Some GL operations require a CORS context and cannot be run from a local file. So you can run a local web server using the command below.
+Some GL operations require a CORS context and cannot be run from a local file. So you can run a local web server using the command below. Make sure you have already compiled.
 
 ```javascript
 yarn run examples
@@ -49,6 +49,20 @@ yarn run examples
 ### Image Upscale
 
 Open [http://127.0.0.1:8080/examples/image.html](http://127.0.0.1:8080/examples/image.html)
+
+## Generating Typescript Types
+
+```
+yarn run types
+```
+
+## Packaging
+
+```
+yarn run build
+yarn run types
+yarn pack
+```
 
 ## Credits
 

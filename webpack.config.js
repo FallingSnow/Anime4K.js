@@ -14,6 +14,8 @@ module.exports = {
     extensions: ['.ts', '.js', '.json', '.glsl']
   },
 
+  devtool: "source-map",
+
   module: {
     rules: [
       {

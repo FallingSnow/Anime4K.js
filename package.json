@@ -29,7 +29,8 @@
     "build": "webpack --mode production",
     "build:dev": "webpack --mode development",
     "examples": "npx http-server ./",
-    "tsc": "tsc --noEmit"
+    "tsc": "tsc --noEmit",
+    "types": "tsc --emitDeclarationOnly"
   },
   "devDependencies": {
     "@swc/core": "^1.3.81",
