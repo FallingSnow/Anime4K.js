@@ -26,8 +26,8 @@ yarn build
 ### Image Upscale
 
 ```javascript
-const upscaler = new Anime4KJS.ImageUpscaler(Anime4KJS.ANIME4KJS_SIMPLE_M_2X /* PROFILE */);
-upscaler.attachSource(textureSource, canvasElement);
+const upscaler = new Anime4KJS.ImageUpscaler(Anime4KJS.ANIME4KJS_SIMPLE_M_2X /* PROFILE */, canvasElement);
+upscaler.attachSource(textureSource);
 upscaler.upscale(); // do upscale
 ```
 
