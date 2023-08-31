@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <div id="time"></div>
+        <img src="Lenna_(test_image).png" id="source"/>
+        <canvas id="canvas"></canvas>
+        <script src="../dist/anime4k.js"></script>
+        <script>
+            const textureSource = document.getElementById("source");
+            const canvasElement = document.getElementById("canvas");
+            const upscaler = new Anime4KJS.ImageUpscaler(Anime4KJS.ANIME4K_LOWEREND_MODE_C_FAST /* PROFILE */, canvasElement);
+
+            function upscale() {
+                upscaler.attachSource(textureSource);
+                const startTime = performance.now();
+                upscaler.upscale(); // do upscale
+                const upscaleTime = performance.now() - startTime;
+                document.getElementById("time").textContent = `Upscale took ${upscaleTime}ms`;
+            }
+
+            // Image may or may not be loaded yet
+            if (textureSource.complete) {
+                upscale();
+            } else {
+                textureSource.onload = () => upscale();
+            }
+            
+        </script>
+    </body>
+</html>

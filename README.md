@@ -39,6 +39,17 @@ upscaler.attachVideo(videoElement, canvasElement);
 upscaler.start(); // start upscale
 ```
 
+## Examples
+Some GL operations require a CORS context and cannot be run from a local file. So you can run a local web server using the command below.
+
+```javascript
+yarn run examples
+```
+
+### Image Upscale
+
+Open [http://127.0.0.1:8080/examples/image.html](http://127.0.0.1:8080/examples/image.html)
+
 ## Credits
 
 * [Anime4K](https://github.com/bloc97/Anime4K) by [bloc97](https://github.com/bloc97)

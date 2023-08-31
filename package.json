@@ -28,15 +28,15 @@
     "clean": "rimraf dist d.ts",
     "build": "webpack --mode production",
     "build:dev": "webpack --mode development",
+    "examples": "npx http-server ./",
     "tsc": "tsc --noEmit"
   },
   "devDependencies": {
-    "@babel/core": "^7.21.8",
-    "@babel/preset-env": "^7.21.5",
+    "@swc/core": "^1.3.81",
+    "@types/dom-webcodecs": "^0.1.8",
     "babel-loader": "^9.1.2",
-    "core-js": "^3.30.2",
     "rimraf": "^5.0.1",
-    "ts-loader": "^9.4.2",
+    "swc-loader": "^0.2.3",
     "typescript": "^5.0.4",
     "webpack": "^5.82.1",
     "webpack-cli": "^5.1.1"
